@@ -1,0 +1,42 @@
+1.
+
+a = input("Veuillez entrer un nombre.")
+
+b = input("Veuillez entrer un autre nombre.")
+
+i = int(a) * int(b)
+
+if i > 0:
+	print("Leur produit est positif.")
+elif i < 0:
+	print("Leur produit est négatif.")
+else:
+	print("Leur produit est nul.")
+
+	---------------------------------
+
+2.
+
+age = input("Entrez votre age...")
+if int(age) >= 18:
+	print("Vous êtes majeur.")
+else:
+	print("Vous etes mineur.")
+
+	----------------------------------
+
+3.
+
+x = input("Tappez un nombre.")
+if 5 < int(x) < 10:
+	print(x)
+
+	----------------------------------
+
+4.
+
+x = input("Tappez un nombre.")
+if 5 < int(x) or 10 > int(x):
+	print(x)
+
+	-----------------------------------

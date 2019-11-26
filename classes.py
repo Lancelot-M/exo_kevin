@@ -1,28 +1,40 @@
+#!/usr/bin/python3.6
 # -*-coding:Utf-8 -*
 
 class Carre:
     "Classe prennant en paramaètre la longueur d'un coté en cm."
 
-    def __init__(self, côté):
-        self.côté = côté
-        self.aire = côté * côté
+    def __init__(self, cote):
+        self.cote = cote
+        self.perimeter = self.perimeter()
+        self.aire = self.aire()
 
     def perimeter(self):
         "Cette méthode permet de retourner le périmètre du carré"
 
-        return(self.côté * 4)
+        return(self.cote * 4)
 
+    def aire(self):
+        return(self.cote * self.cote)
 
-#PARTIE TEST ------------------------
+    def facto(X, carre):
+        x = X * carre.cote
+        return(Carre(x))
 
-try:
-    condition = open("classes.py", "r")
-except IOError:
-    print("File not open")
-else:
-    print("carré")
-    x = 2
-    carré_cubique = Carre(x)
-    print("L'aire d'un carré de côté {} est de {} cm2.".format(x, carré_cubique.aire))
-    print(carré_cubique.perimeter)
+    def addit(carreA, carreB):
+        x = carreA.cote + carreB.cote
+        return(Carre(x))
+
+    def inht(carre):
+        return(int(carre.cote))
+
+#PARTIE TEST ----------------------------------------------------------
+
+if __name__ == '__main__':
+
+    carre1 = Carre(2.1)
+    print("Le carre à un côté de {}cm, une aire de {}cm2 et un périmètre de {}cm.\n".format(carre1.cote, carre1.aire, carre1.perimeter))
+    carre2 = Carre.facto(2, carre1)
+    carre3 = Carre.addit(carre1, carre2)
+    print(Carre.inht(carre3))
     input("Pouet")
